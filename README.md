@@ -31,10 +31,14 @@ sudo apt upgrade
     ปลดล็อก Bootloader:
         เชื่อมต่อโทรศัพท์ของคุณกับคอมพิวเตอร์ผ่าน USB
         เปิดเทอร์มินัลแล้วรันคำสั่ง:
+
         
 ```
 adb reboot bootloader
 fastboot oem unlock
+##ถ้าค้าง
+heimdall flash --RECOVERY twrp-3.4.0-0.img --no-reboot
+##แล้วข้ามไป บูตเข้าสู่ Recovery Mode
 ```
        
 ## ขั้นตอนที่ 3: แฟลช Custom Recovery (TWRP)
