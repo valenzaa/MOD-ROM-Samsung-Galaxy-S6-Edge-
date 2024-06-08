@@ -17,11 +17,10 @@ $ sudo apt install heimdall-flash
 
 ติดตั้งไลบรารีที่จำเป็น:
 
-bash
-
 $ sudo apt install libusb-1.0-0
 
 ขั้นตอนที่ 2: ปลดล็อก Bootloader
+
     เปิดใช้งาน Developer Options บนโทรศัพท์ของคุณ:
         ไปที่ Settings > About phone > Software information > แตะที่ Build number 7 ครั้ง
         กลับไปที่ Settings > Developer options > เปิดใช้งาน OEM unlocking และ USB debugging
@@ -34,7 +33,9 @@ $ sudo apt install libusb-1.0-0
         เปิดเทอร์มินัลแล้วรันคำสั่ง:
        $ adb reboot bootloader
        $ fastboot oem unlock
+       
 ขั้นตอนที่ 3: แฟลช Custom Recovery (TWRP)
+
     ดาวน์โหลด TWRP Recovery Image สำหรับ G928C:
         ไปที่เว็บไซต์ทางการของ TWRP และดาวน์โหลดไฟล์ที่เหมาะสมกับอุปกรณ์ของคุณ
     แฟลช TWRP Recovery:
@@ -44,7 +45,9 @@ $ sudo apt install libusb-1.0-0
       $ heimdall flash --RECOVERY twrp-image-file.img
     บูตเข้าสู่ Recovery Mode:
         หลังจากแฟลช ให้กดและถือปุ่ม Volume Up + Home + Power พร้อมกันเพื่อเข้าสู่ TWRP recovery
+        
 ขั้นตอนที่ 4: รูทอุปกรณ์
+
     ดาวน์โหลดไฟล์ Magisk ZIP ล่าสุด:
         จากหน้า GitHub releases ของ Magisk
     ติดตั้ง Magisk:
@@ -53,7 +56,9 @@ $ sudo apt install libusb-1.0-0
         สไลด์เพื่อยืนยันการแฟลชและติดตั้ง Magisk
     รีบูต:
         รีบูตโทรศัพท์หลังการติดตั้ง
+        
 ขั้นตอนที่ 5: ติดตั้ง MOD ROM
+
     ดาวน์โหลด MOD ROM ที่ต้องการสำหรับ G928C:
         ตรวจสอบว่าเข้ากันได้กับรุ่นอุปกรณ์ของคุณ
     โอน ROM ไปยังโทรศัพท์ของคุณ:
@@ -66,11 +71,15 @@ $ sudo apt install libusb-1.0-0
         สไลด์เพื่อยืนยันการแฟลชและติดตั้ง ROM
     รีบูต:
         รีบูตโทรศัพท์หลังการติดตั้ง การบูตครั้งแรกอาจใช้เวลานาน
+        
 หมายเหตุ:
+
     สำรองข้อมูลสำคัญ: การรูทและติดตั้ง ROM จะลบข้อมูลของคุณ ตรวจสอบให้แน่ใจว่าคุณได้สำรองข้อมูลสำคัญไว้แล้ว
     การยกเลิกประกัน: การรูทและการแฟลช ROM จะทำให้การรับประกันของคุณสิ้นสุดลง
     ทำด้วยความระมัดระวัง: ทำตามขั้นตอนอย่างระมัดระวังเพื่อหลีกเลี่ยงการทำให้โทรศัพท์ของคุณเสียหาย
+    
 # คำแนะนำ:
+
     สำหรับ Android เวอร์ชัน 9.0 ขึ้นไป ให้ใช้ twrp-3.4.0-0 หรือ twrp-3.3.1-0
     สำหรับ Android เวอร์ชันระหว่าง 8.0 ถึง 9.0 twrp-3.2.1-0 เหมาะสม
     สำหรับ Android เวอร์ชันระหว่าง 7.0 ถึง 8.0 twrp-3.1.0-0 เหมาะสม
