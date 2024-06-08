@@ -3,19 +3,21 @@
 ### แนวทางการรูทและติดตั้ง MOD ROM บน Samsung Galaxy S6 Edge+ (รุ่น G928C) บน Ubuntu 22.04:
 ## ขั้นตอนที่ 1: ติดตั้งเครื่องมือที่จำเป็น
 
-bash sudo apt update
-bash sudo apt upgrade
+```
+sudo apt update
+sudo apt upgrade
+```
 
 ## ติดตั้ง ADB และ Fastboot:
-bash sudo apt install adb fastboot
+`sudo apt install adb fastboot`
 
 ## ติดตั้ง Heimdall (โปรแกรมที่ใช้แทน Odin บน Linux):
 
-sudo apt install heimdall-flash
+`sudo apt install heimdall-flash`
 
 ## ติดตั้งไลบรารีที่จำเป็น:
 
-bash sudo apt install libusb-1.0-0
+`sudo apt install libusb-1.0-0`
 
 ## ขั้นตอนที่ 2: ปลดล็อก Bootloader
 
@@ -30,26 +32,29 @@ bash sudo apt install libusb-1.0-0
         เชื่อมต่อโทรศัพท์ของคุณกับคอมพิวเตอร์ผ่าน USB
         เปิดเทอร์มินัลแล้วรันคำสั่ง:
         
+```
 adb reboot bootloader
 fastboot oem unlock
+```
        
 ## ขั้นตอนที่ 3: แฟลช Custom Recovery (TWRP)
 
     ดาวน์โหลด TWRP Recovery Image สำหรับ G928C:
         ไปที่เว็บไซต์ทางการของ TWRP และดาวน์โหลดไฟล์ที่เหมาะสมกับอุปกรณ์ของคุณ
     แฟลช TWRP Recovery:
-        วางไฟล์ TWRP image ในไดเรกทอรีโฮมของคุณ
+        วางไฟล์ twrp-3.1.0-0-twrp.img ในไดเรกทอรีโฮมของคุณ
+        **ตำแหน่ง twrp-3.1.0-0-twrp.img ต้องเข้าถึงง่าย บั๊กได้**
         รีบูตโทรศัพท์ของคุณเข้าสู่ Download mode
         ในเทอร์มินัล รันคำสั่ง:
-heimdall flash --RECOVERY twrp-image-file.img
+heimdall flash --RECOVERY twrp-3.1.0-0-twrp.img
 
     บูตเข้าสู่ Recovery Mode:
-        หลังจากแฟลช ให้กดและถือปุ่ม Volume Up + Home + Power พร้อมกันเพื่อเข้าสู่ TWRP recovery
+        หลังจากแฟลช ให้กดและถือปุ่ม **Volume Up + Home + Power** พร้อมกันเพื่อเข้าสู่ TWRP recovery
         
 ขั้นตอนที่ 4: รูทอุปกรณ์
 
     ดาวน์โหลดไฟล์ Magisk ZIP ล่าสุด:
-        จากหน้า GitHub releases ของ Magisk
+        จากหน้า [GitHub releases](https://https://github.com/topjohnwu/Magisk/releases) ของ [Magisk](https://github.com/topjohnwu/Magisk/releases)
     ติดตั้ง Magisk:
         คัดลอกไฟล์ Magisk ZIP ไปยังโทรศัพท์ของคุณ
         ใน TWRP ให้แตะ Install แล้วเลือกไฟล์ Magisk ZIP
@@ -72,7 +77,7 @@ heimdall flash --RECOVERY twrp-image-file.img
     รีบูต:
         รีบูตโทรศัพท์หลังการติดตั้ง การบูตครั้งแรกอาจใช้เวลานาน
         
-หมายเหตุ:
+# หมายเหตุ:
 
     สำรองข้อมูลสำคัญ: การรูทและติดตั้ง ROM จะลบข้อมูลของคุณ ตรวจสอบให้แน่ใจว่าคุณได้สำรองข้อมูลสำคัญไว้แล้ว
     การยกเลิกประกัน: การรูทและการแฟลช ROM จะทำให้การรับประกันของคุณสิ้นสุดลง
