@@ -34,11 +34,50 @@ sudo apt upgrade
 
         
 ```
-adb reboot bootloader
-fastboot oem unlock
-##ถ้าค้าง
 heimdall flash --RECOVERY twrp-3.1.0-0.img --no-reboot
+# heimdall flash --RECOVERY /home/backswv/Downloads/twrp-3.1.0-0-twrp.img --no-reboot
 ```
+
+(base) backswv@unix-backswv:~$ heimdall flash --RECOVERY /home/backswv/Downloads/twrp-3.1.0-0-twrp.img --no-reboot
+Heimdall v2.0.2
+
+Copyright (c) 2010-2017 Benjamin Dobell, Glass Echidna
+https://www.glassechidna.com.au/
+
+This software is provided free of charge. Copying and redistribution is
+encouraged.
+
+If you appreciate this software and you would like to support future
+development please consider donating:
+https://www.glassechidna.com.au/donate/
+
+Initialising connection...
+Detecting device...
+Claiming interface...
+Initialising protocol...
+Resetting device...
+Protocol initialisation successful.
+
+Beginning session...
+
+Some devices may take up to 2 minutes to respond.
+Please be patient!
+
+Session begun.
+
+Downloading device's PIT file...
+PIT file download successful.
+
+Uploading RECOVERY
+100%
+RECOVERY upload successful
+
+Ending session...
+Releasing device interface...
+
+(base) backswv@unix-backswv:~$ 
+
+
        
 ## ขั้นตอนที่ 3: แฟลช Custom Recovery (TWRP)
 
