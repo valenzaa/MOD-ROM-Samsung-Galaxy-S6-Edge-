@@ -37,8 +37,7 @@ sudo apt upgrade
 adb reboot bootloader
 fastboot oem unlock
 ##ถ้าค้าง
-heimdall flash --RECOVERY twrp-3.4.0-0.img --no-reboot
-##แล้วข้ามไป บูตเข้าสู่ Recovery Mode
+heimdall flash --RECOVERY twrp-3.1.0-0.img --no-reboot
 ```
        
 ## ขั้นตอนที่ 3: แฟลช Custom Recovery (TWRP)
