@@ -3,21 +3,21 @@
 ### แนวทางการรูทและติดตั้ง MOD ROM บน Samsung Galaxy S6 Edge+ (รุ่น G928C) บน Ubuntu 22.04:
 ## ขั้นตอนที่ 1: ติดตั้งเครื่องมือที่จำเป็น
 
-$ sudo apt update
-$ sudo apt upgrade
+bash sudo apt update
+bash sudo apt upgrade
 
 ## ติดตั้ง ADB และ Fastboot:
-$ sudo apt install adb fastboot
+bash sudo apt install adb fastboot
 
 ติดตั้ง Heimdall (โปรแกรมที่ใช้แทน Odin บน Linux):
 
 bash
 
-$ sudo apt install heimdall-flash
+bash sudo apt install heimdall-flash
 
 ติดตั้งไลบรารีที่จำเป็น:
 
-$ sudo apt install libusb-1.0-0
+bash sudo apt install libusb-1.0-0
 
 ขั้นตอนที่ 2: ปลดล็อก Bootloader
 
@@ -31,8 +31,8 @@ $ sudo apt install libusb-1.0-0
     ปลดล็อก Bootloader:
         เชื่อมต่อโทรศัพท์ของคุณกับคอมพิวเตอร์ผ่าน USB
         เปิดเทอร์มินัลแล้วรันคำสั่ง:
-       $ adb reboot bootloader
-       $ fastboot oem unlock
+       bash adb reboot bootloader
+       bash fastboot oem unlock
        
 ขั้นตอนที่ 3: แฟลช Custom Recovery (TWRP)
 
@@ -42,7 +42,7 @@ $ sudo apt install libusb-1.0-0
         วางไฟล์ TWRP image ในไดเรกทอรีโฮมของคุณ
         รีบูตโทรศัพท์ของคุณเข้าสู่ Download mode
         ในเทอร์มินัล รันคำสั่ง:
-      $ heimdall flash --RECOVERY twrp-image-file.img
+      bash heimdall flash --RECOVERY twrp-image-file.img
     บูตเข้าสู่ Recovery Mode:
         หลังจากแฟลช ให้กดและถือปุ่ม Volume Up + Home + Power พร้อมกันเพื่อเข้าสู่ TWRP recovery
         
