@@ -20,7 +20,9 @@ sudo apt upgrade
 `sudo apt install libusb-1.0-0`
 
 ## ขั้นตอนที่ 2: ปลดล็อก Bootloader
-
+        โหลด twrp-3.1.0-0-twrp.img
+        วางไฟล์ twrp-3.1.0-0-twrp.img ในไดเรกทอรีโฮมของคุณ
+        **ตำแหน่ง twrp-3.1.0-0-twrp.img ต้องเข้าถึงง่าย บั๊กได้**
     เปิดใช้งาน Developer Options บนโทรศัพท์ของคุณ:
         ไปที่ Settings > About phone > Software information > แตะที่ Build number 7 ครั้ง
         กลับไปที่ Settings > Developer options > เปิดใช้งาน OEM unlocking และ USB debugging
@@ -37,8 +39,7 @@ sudo apt upgrade
 heimdall flash --RECOVERY twrp-3.1.0-0.img --no-reboot
 # heimdall flash --RECOVERY /home/backswv/Downloads/twrp-3.1.0-0-twrp.img --no-reboot
 ```
-
-(base) backswv@unix-backswv:~$ heimdall flash --RECOVERY /home/backswv/Downloads/twrp-3.1.0-0-twrp.img --no-reboot
+```(base) backswv@unix-backswv:~$ heimdall flash --RECOVERY /home/backswv/Downloads/twrp-3.1.0-0-twrp.img --no-reboot
 Heimdall v2.0.2
 
 Copyright (c) 2010-2017 Benjamin Dobell, Glass Echidna
@@ -75,23 +76,30 @@ RECOVERY upload successful
 Ending session...
 Releasing device interface...
 
-(base) backswv@unix-backswv:~$ 
+(base) backswv@unix-backswv:~$ *
+```
 
-
+ดึงสาย 
+ลดเสียง-ปิดเครื่อง ค้างไว้
+ไปกินอาหารฟุตสตรีท 
+**น่าจะ Magisk ตามไปเลย เพราะใช้คำสั่ง --no-reboot รอบหน้าเทสใหม่
        
 ## ขั้นตอนที่ 3: แฟลช Custom Recovery (TWRP)
+ 
 
-    ดาวน์โหลด TWRP Recovery Image สำหรับ G928C:
-        ไปที่เว็บไซต์ทางการของ TWRP และดาวน์โหลดไฟล์ที่เหมาะสมกับอุปกรณ์ของคุณ
-    แฟลช TWRP Recovery:
-        วางไฟล์ twrp-3.1.0-0-twrp.img ในไดเรกทอรีโฮมของคุณ
-        **ตำแหน่ง twrp-3.1.0-0-twrp.img ต้องเข้าถึงง่าย บั๊กได้**
+    ดาวน์โหลด ** ubuntu13.04-heimdall-frontend_1.4.0-0_amd64.deb 
+[ubuntu13.04-heimdall-frontend_1.4.0-0_amd64.deb](https://https://bitbucket.org/benjamin_dobell/heimdall/downloads/ubuntu13.04-heimdall-frontend_1.4.0-0_amd64.deb)
+
+`sudo dpkg -i ~/Downloads/ubuntu13.04-heimdall-frontend_1.4.0-0_amd64.deb`
+
         รีบูตโทรศัพท์ของคุณเข้าสู่ Download mode
         ในเทอร์มินัล รันคำสั่ง:
-heimdall flash --RECOVERY twrp-3.1.0-0-twrp.img
+`heimdall flash --RECOVERY twrp-3.4.0-0.img --usb-log-level debug`
+
 
     บูตเข้าสู่ Recovery Mode:
-        หลังจากแฟลช ให้กดและถือปุ่ม **Volume Up + Home + Power** พร้อมกันเพื่อเข้าสู่ TWRP recovery
+        หลังจากแฟลช ให้กดและถือปุ่ม **Volume Up + Home + Power** พร้อมกันเพื่อเข้าสู่ TWRP recovery 
+        
         
 ขั้นตอนที่ 4: รูทอุปกรณ์
 
