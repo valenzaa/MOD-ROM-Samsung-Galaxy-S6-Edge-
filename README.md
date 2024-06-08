@@ -9,17 +9,15 @@ bash sudo apt upgrade
 ## ติดตั้ง ADB และ Fastboot:
 bash sudo apt install adb fastboot
 
-ติดตั้ง Heimdall (โปรแกรมที่ใช้แทน Odin บน Linux):
+## ติดตั้ง Heimdall (โปรแกรมที่ใช้แทน Odin บน Linux):
 
-bash
+sudo apt install heimdall-flash
 
-bash sudo apt install heimdall-flash
-
-ติดตั้งไลบรารีที่จำเป็น:
+## ติดตั้งไลบรารีที่จำเป็น:
 
 bash sudo apt install libusb-1.0-0
 
-ขั้นตอนที่ 2: ปลดล็อก Bootloader
+## ขั้นตอนที่ 2: ปลดล็อก Bootloader
 
     เปิดใช้งาน Developer Options บนโทรศัพท์ของคุณ:
         ไปที่ Settings > About phone > Software information > แตะที่ Build number 7 ครั้ง
@@ -31,10 +29,11 @@ bash sudo apt install libusb-1.0-0
     ปลดล็อก Bootloader:
         เชื่อมต่อโทรศัพท์ของคุณกับคอมพิวเตอร์ผ่าน USB
         เปิดเทอร์มินัลแล้วรันคำสั่ง:
-       bash adb reboot bootloader
-       bash fastboot oem unlock
+        
+adb reboot bootloader
+fastboot oem unlock
        
-ขั้นตอนที่ 3: แฟลช Custom Recovery (TWRP)
+## ขั้นตอนที่ 3: แฟลช Custom Recovery (TWRP)
 
     ดาวน์โหลด TWRP Recovery Image สำหรับ G928C:
         ไปที่เว็บไซต์ทางการของ TWRP และดาวน์โหลดไฟล์ที่เหมาะสมกับอุปกรณ์ของคุณ
@@ -42,7 +41,8 @@ bash sudo apt install libusb-1.0-0
         วางไฟล์ TWRP image ในไดเรกทอรีโฮมของคุณ
         รีบูตโทรศัพท์ของคุณเข้าสู่ Download mode
         ในเทอร์มินัล รันคำสั่ง:
-      bash heimdall flash --RECOVERY twrp-image-file.img
+heimdall flash --RECOVERY twrp-image-file.img
+
     บูตเข้าสู่ Recovery Mode:
         หลังจากแฟลช ให้กดและถือปุ่ม Volume Up + Home + Power พร้อมกันเพื่อเข้าสู่ TWRP recovery
         
