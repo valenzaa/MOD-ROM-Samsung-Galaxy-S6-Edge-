@@ -274,8 +274,10 @@ https://github.com/TeamWin/android_device_samsung_zenltetmo
 ## ถ้าบิดดิ้งไม่ได้ใช้ไฟล์ 2 .img .ตัวใน 
 ### mkbootimg -> mkboot.img
 ### dtb.img
+```
 heimdall flash --RECOVERY mkboot.img
 heimdall flash --RECOVERY dtb.img
+```
 ## ติดตั้งไปใน download mode 
 ## เครื่องจะเข้าแต่ download mode ให้ใช้
 ### SAMFW.COM_SM-G928C_THL_G928CXXU5CVG4_fac.zip
