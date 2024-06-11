@@ -264,14 +264,17 @@ twrp-2.5.0.0:
     Compatible Android Versions: Android 4.2 (Jelly Bean) to Android 4.3 (Jelly Bean)
     Release Date: 2015
 
-#กรณีทำผิด เกิดจากเครื่องดับ หรือเลือกไฟล์ผิด ##เครื่องจะตอบสนองเพียง การกด (ลดเสียง + ปิด) และ ((ลดเสียง + ปิด + โฮม)+เพิ่มเสียง)
+# กรณีทำผิด เกิดจากเครื่องดับ หรือเลือกไฟล์ผิด 
+## เครื่องจะตอบสนองเพียง 
+### การกดค้าง (ลดเสียง + ปิด) 
+### และการกดค้าง ((ลดเสียง + ปิด + โฮม)+เพิ่มเสียง)
 https://github.com/TeamWin/android_device_samsung_zenltetmo
-##ถ้าบิดดิ้งไม่ได้ใช้ไฟล์ 2 .img .ตัวใน 
-###mkbootimg -> mkboot.img
-###dtb.img
-##ติดตั้งไปใน download mode 
-##เครื่องจะเข้าแต่ download mode ให้ใช้
-###SAMFW.COM_SM-G928C_THL_G928CXXU5CVG4_fac.zip
+## ถ้าบิดดิ้งไม่ได้ใช้ไฟล์ 2 .img .ตัวใน 
+### mkbootimg -> mkboot.img
+### dtb.img
+## ติดตั้งไปใน download mode 
+## เครื่องจะเข้าแต่ download mode ให้ใช้
+### SAMFW.COM_SM-G928C_THL_G928CXXU5CVG4_fac.zip
 https://samfw.com/firmware/SM-G928C/THL/G928CXXU5CVG4
-##ใช้ odin ลงทีละ1 และ ลง 4 อย่างพร้อมกัน 
-###จะกลับมาเป็น twrp-2.8.0.1 
+## ใช้ odin ลงทีละ1 และ ลง 4 อย่างพร้อมกัน 
+### จะกลับมาเป็น twrp-2.8.0.1 
