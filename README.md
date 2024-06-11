@@ -277,4 +277,23 @@ https://github.com/TeamWin/android_device_samsung_zenltetmo
 ### SAMFW.COM_SM-G928C_THL_G928CXXU5CVG4_fac.zip
 https://samfw.com/firmware/SM-G928C/THL/G928CXXU5CVG4
 ## ใช้ odin ลงทีละ1 และ ลง 4 อย่างพร้อมกัน 
-### จะกลับมาเป็น twrp-2.8.0.1 
+### จะกลับมาเป็น twrp-2.8.5.0 
+ขั้นตอนหลักดังนี้:
+
+    เตรียมสิ่งแวดล้อม:
+        ติดตั้งแพ็กเกจที่จำเป็น: sudo apt-get install build-essential libncurses-dev bison flex libssl-dev libelf-dev
+
+    ดาวน์โหลดเคอร์เนลซอร์ส:
+        คลอนซอร์สโค้ดจาก GitHub: git clone -b twrp-6.0 https://github.com/jcadduono/android_kernel_samsung_universal7420.git
+        เข้าสู่ไดเรกทอรี: cd android_kernel_samsung_universal7420
+
+    คอนฟิกเคอร์เนล:
+        ใช้คำสั่ง: make menuconfig
+
+    คอมไพล์เคอร์เนล:
+        รันคำสั่ง: make -j$(nproc)
+        ติดตั้งโมดูล: sudo make modules_install
+
+    ติดตั้งเคอร์เนล:
+        คัดลอกเคอร์เนลใหม่ไปยังไดเรกทอรีบูต: sudo cp arch/arm64/boot/Image.gz /boot/vmlinuz-custom
+        อัปเดต Bootloader
