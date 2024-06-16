@@ -1,7 +1,9 @@
 Load https://samfw.com/firmware/SM-G928C/THL/G928CXXU5CVG4
 คลายไฟล์ เปลี่ยนชื่อโฟเดอร์หลังคลายไฟล SM-G928C_THL ไม่ยาวมากจะไม่เออเร่อ
-ไปหน้า ดาวโหลดโหมด
-ปิดเครื่อง กด 3 ปุ่มค้างพร้อมกัน ปุ่มโฮม ปุ่มลดเสียง ปุ่มเปิด
+ไปหน้า ดาวโหลดโหมด detect compatible download-mode
+ปิดเครื่อง กด 3 ปุ่มค้างพร้อมกัน ปุ่มโฮม ปุ่มลดเสียง ปุ่มเปิด 
+เมื่อถึงหน้าจอฟ้า Warning กดปุ่มเพิ่มเสียง
+
 ตัวอย่างการรีเฟิร์มแวร์โดยใช้คอมมาน
 ```
 heimdall flash --BOOT boot.img --SYSTEM system.img --RECOVERY recovery.img --BOOTLOADER sboot.bin --CM cm.bin --RADIO modem.bin --CACHE cache.img --HIDDEN hidden.img --verbose
